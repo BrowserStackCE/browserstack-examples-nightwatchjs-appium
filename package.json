@@ -1,0 +1,27 @@
+{
+  "name": "nightwatch-browserstack",
+  "version": "1.0.0",
+  "readme": "Nightwatch Integration with [BrowserStack](https://www.browserstack.com)",
+  "description": "Selenium examples for Nightwatch and BrowserStack Automate",
+  "scripts": {
+    "test": "npm run single-android && npm run local && npm run parallel",
+    "single-android": "nightwatch --test ./tests/single/single_test.js --env browserstack.android",
+    "single-ios": "nightwatch --test ./tests/single/single_ios.js --env browserstack.ios",
+    "local": "nightwatch --test ./tests/local/local_test.js  --env browserstack.local ",
+    "parallel": "nightwatch --test ./tests/single/single_test.js  --env browserstack.android,browserstack.android2",
+    "parallel_local": "node scripts/local.runner.js --test ./tests/local/local_test.js --env browserstack.local,browserstack.local",
+    "suite": "nightwatch ./tests/suite --parallel --env browserstack.android"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/browserstack/nightwatch-browserstack"
+  },
+  "dependencies": {
+    "browserstack-local": "^1.4.8",
+    "nightwatch": "^2.1.5"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@nightwatch/browserstack": "^0.1.2"
+  }
+}
