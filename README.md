@@ -19,7 +19,8 @@
 
 ## Running your tests
 
-- To run a single test, run `npm run single`
+- To run a single android test, run `npm run single-android`
+- To run a single ios test, run `npm run single-ios`
 - To run local tests, run `npm run local`
 - To run parallel tests, run `npm run parallel`
 
