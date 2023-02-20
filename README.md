@@ -16,7 +16,7 @@
   export BROWSERSTACK_USERNAME=<browserstack-username> &&
   export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
   ```
-- Upload the apps in resources folder using `curl -u "<username>:<access-key>" -X POST "https://api-cloud.browserstack.com/app-automate/upload" -F "file=@/path/to/app/file/application-debug.apk"`
+- Upload the apps provided in resources folder using this command `curl -u "<username>:<access-key>" -X POST "https://api-cloud.browserstack.com/app-automate/upload" -F "file=@/path/to/app/file/application-debug.apk"`
 
 ## Running your tests
 
