@@ -16,6 +16,7 @@
   export BROWSERSTACK_USERNAME=<browserstack-username> &&
   export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
   ```
+- Upload the apps in resources folder using `curl -u "<username>:<access-key>" -X POST "https://api-cloud.browserstack.com/app-automate/upload" -F "file=@/path/to/app/file/application-debug.apk"`
 
 ## Running your tests
 
@@ -28,8 +29,8 @@ Understand how many parallel sessions you need by using our [Parallel Test Calcu
 
 ## Notes
 
-- You can view your test results on the [BrowserStack automate dashboard](https://automate.browserstack.com)
-- To test on a different set of browsers, check out our [capabilities generator](https://www.browserstack.com/automate/capabilities)
+- You can view your test results on the [BrowserStack app automate dashboard](https://app-automate.browserstack.com/)
+- To test on a different set of browsers, check out our [capabilities generator](https://www.browserstack.com/app-automate/capabilities)
 
 
 ## Connecting to BrowserStack via a proxy server
@@ -53,8 +54,8 @@ You can specify proxy settings in Nightwatch by adding the `proxy` key in your `
 
 ## Additional Resources
 
-- [Documentation for writing automate test scripts in Node](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs)
-- [Customizing your tests on BrowserStack](https://www.browserstack.com/automate/capabilities)
-- [Browsers & mobile devices for selenium testing on BrowserStack](https://www.browserstack.com/list-of-browsers-and-platforms?product=automate)
-- [Using REST API to access information about your tests via the command-line interface](https://www.browserstack.com/docs/automate/api-reference/selenium/introduction)
-- [Example to update the Browserstack session status based on the test results](https://github.com/blueimp/nightwatch-browserstack)
+- [Documentation for writing app automate test scripts in Node](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs)
+- [Customizing your tests on BrowserStack](https://www.browserstack.com/app-automate/capabilities)
+- [Browsers & mobile devices for selenium testing on BrowserStack](https://www.browserstack.com/list-of-browsers-and-platforms/app_automate)
+- [Using REST API to access information about your tests via the command-line interface](https://www.browserstack.com/docs/app-automate/api-reference/introduction)
+
