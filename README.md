@@ -1,29 +1,32 @@
-# nightwatch-browserstack
+# browserstack-appium-nightwatch-example
 
 [Nightwatch](http://nightwatchjs.org/) Integration with BrowserStack.
 
-![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
-
-<img src ="http://nightwatchjs.org/img/logo-nightwatch.png" height = "110">
+![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780) <img src ="http://nightwatchjs.org/img/logo-nightwatch.png" height = "110">
 
 ## Setup
 
 - Clone the repo
-- Install dependencies `npm install`
-- You can export the environment variables for the Username and Access Key of your BrowserStack account
+- Install the dependencies using `npm install`
+- Export the environment variables for the Username and Access Key of your BrowserStack account, which you can get directly from the app automate dashboard
 
   ```
   export BROWSERSTACK_USERNAME=<browserstack-username> &&
   export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
   ```
+
 - Upload the apps provided in resources folder using this command `curl -u "<username>:<access-key>" -X POST "https://api-cloud.browserstack.com/app-automate/upload" -F "file=@/path/to/app/file/application-debug.apk"`
+- Please note the value of app_url in the API response and set the app capbility in the nightwatch.conf.js and nightwatch-local.conf.js for the respective apps
 
 ## Running your tests
 
 - To run a single android test, run `npm run single-android`
 - To run a single ios test, run `npm run single-ios`
-- To run local tests, run `npm run local`
 - To run parallel tests, run `npm run parallel`
+- To run test suite, run `npm run suite`
+- To run local tests, run `npm run local`
+- To run parallel local tests, run `npm run parallel-local`
+
 
 Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
 

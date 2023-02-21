@@ -7,9 +7,9 @@
     "test": "npm run single-android && npm run local && npm run parallel",
     "single-android": "nightwatch --test ./tests/single/single_test.js --env browserstack.android",
     "single-ios": "nightwatch --test ./tests/single/single_ios.js --env browserstack.ios",
-    "local": "nightwatch --config ./nightwatch-local.conf.js --test ./tests/local/local_test.js  --env browserstack.local ",
+    "local": "node scripts/local.runner.js --config ./nightwatch-local.conf.js --test ./tests/local/local_test.js  --env browserstack.local ",
     "parallel": "nightwatch --test ./tests/single/single_test.js  --env browserstack.android,browserstack.android2",
-    "parallel-local": "nightwatch --config ./nightwatch-local.conf.js --test ./tests/local/local_test.js --env browserstack.local,browserstack.local2",
+    "parallel-local": "node scripts/local.runner.js --config ./nightwatch-local.conf.js --test ./tests/local/local_test.js --env browserstack.local,browserstack.local2",
     "suite": "nightwatch ./tests/suite --parallel --env browserstack.android"
   },
   "repository": {
