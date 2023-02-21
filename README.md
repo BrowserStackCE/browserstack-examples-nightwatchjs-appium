@@ -15,7 +15,12 @@
   export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
   ```
 
-- Upload the apps provided in resources folder using this command `curl -u "<username>:<access-key>" -X POST "https://api-cloud.browserstack.com/app-automate/upload" -F "file=@/path/to/app/file/application-debug.apk"`
+- Upload the apps provided in resources folder using this command 
+```
+  curl -u "yatinsatija_DVMGOW:ySqkQqJrUughc1duBqkB" \
+  -X POST "https://api-cloud.browserstack.com/app-automate/upload" \
+  -F "file=@/path/to/app/file/application-debug.apk"
+  ```
 - Please note the value of app_url in the API response and set the app capbility in the `nightwatch.conf.js` and `nightwatch-local.conf.js` for the respective apps.
   * android_app_url in `browserstack.android` and `browserstack.android2` capability set in nightwatch.conf.js
   * ios_app_url in `browserstack.ios` capability set in nightwatch.conf.js
