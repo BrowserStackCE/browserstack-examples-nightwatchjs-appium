@@ -2,7 +2,7 @@
 
 [Nightwatch](http://nightwatchjs.org/) Integration with BrowserStack.
 
-!<img src ="http://nightwatchjs.org/img/logo-nightwatch.png" height = "110"> [BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780) 
+<img src ="http://nightwatchjs.org/img/logo-nightwatch.png" height = "110"> <img src ="https://d13vhgz95ul9hy.cloudfront.net/blog/wp-content/uploads/2018/03/BrowserStack.png" height = "110">
 
 ## Setup
 
