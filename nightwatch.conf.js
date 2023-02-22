@@ -36,7 +36,7 @@ const nightwatchConfigs = {
     
     
 
-    "browserstack.android": {
+    "browserstack.android_01": {
       extends: 'browserstack',
       'desiredCapabilities': {
         browserName: null,
@@ -48,7 +48,7 @@ const nightwatchConfigs = {
         }
       }
     },
-    "browserstack.android2": {
+    "browserstack.android_02": {
       extends: 'browserstack',
       'desiredCapabilities': {
         browserName: null,
@@ -61,7 +61,7 @@ const nightwatchConfigs = {
       }
     },
 
-    "browserstack.ios": {
+    "browserstack.ios_01": {
       extends: 'browserstack',
       'desiredCapabilities': {
         browserName: null,

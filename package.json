@@ -5,12 +5,12 @@
   "description": "Selenium examples for Nightwatch and BrowserStack Automate",
   "scripts": {
     "test": "npm run single-android && npm run local && npm run parallel",
-    "single-android": "nightwatch --test ./tests/single/single_test.js --env browserstack.android",
-    "single-ios": "nightwatch --test ./tests/single/single_ios.js --env browserstack.ios",
-    "local": "node scripts/local.runner.js --config ./nightwatch-local.conf.js --test ./tests/local/local_test.js  --env browserstack.local ",
-    "parallel": "nightwatch --test ./tests/single/single_test.js  --env browserstack.android,browserstack.android2",
-    "parallel-local": "node scripts/local.runner.js --config ./nightwatch-local.conf.js --test ./tests/local/local_test.js --env browserstack.local,browserstack.local2",
-    "suite": "nightwatch ./tests/suite --parallel --env browserstack.android"
+    "single-android": "nightwatch --test ./tests/single/single_test.js --env browserstack.android_01",
+    "single-ios": "nightwatch --test ./tests/single/single_ios.js --env browserstack.ios_01",
+    "local": "node scripts/local.runner.js --config ./nightwatch-local.conf.js --test ./tests/local/local_test.js  --env browserstack.local_01 ",
+    "parallel": "nightwatch --test ./tests/single/single_test.js  --env browserstack.android_01,browserstack.android_02",
+    "parallel-local": "node scripts/local.runner.js --config ./nightwatch-local.conf.js --test ./tests/local/local_test.js --env browserstack.local_01,browserstack.local_02",
+    "suite": "nightwatch ./tests/suite --parallel --env browserstack.android_01"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,5 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@nightwatch/browserstack": "^0.1.2"
   }
 }

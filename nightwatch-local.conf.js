@@ -17,7 +17,7 @@ const browserStack = {
       userName: process.env.BROWSERSTACK_USERNAME,
       accessKey: process.env.BROWSERSTACK_ACCESS_KEY,
       appiumVersion: '1.22.0',
-      // local:"true",
+      local:"true"
     }
   },
 }
@@ -25,13 +25,6 @@ const browserStack = {
 const nightwatchConfigs = {
   src_folders: [],
   live_output: true,
-  plugins: ['@nightwatch/browserstack'],
-  '@nightwatch/browserstack': {
-    browserstackLocal: true, 
-    browserstackLocalOptions: {
-      localIdentifier: "test123"
-    }
-  },
 
   test_settings: {
     default: {
@@ -42,7 +35,7 @@ const nightwatchConfigs = {
       ...browserStack
     },
     
-    "browserstack.local": {
+    "browserstack.local_01": {
       extends: 'browserstack',
       'desiredCapabilities': {
         browserName: null,
@@ -54,7 +47,7 @@ const nightwatchConfigs = {
         }
       }
     },
-    "browserstack.local2": {
+    "browserstack.local_02": {
         extends: 'browserstack',
         'desiredCapabilities': {
           browserName: null,

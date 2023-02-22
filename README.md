@@ -22,9 +22,9 @@
   -F "file=@/path/to/app/file/application-debug.apk"
   ```
 - Please note the value of app_url in the API response and set the app capbility in the `nightwatch.conf.js` and `nightwatch-local.conf.js` for the respective apps.
-  * android_app_url in `browserstack.android` and `browserstack.android2` capability set in nightwatch.conf.js
-  * ios_app_url in `browserstack.ios` capability set in nightwatch.conf.js
-  * android_local_app_url in `browserstack.local` and `browserstack.local2` capability set in nightwatch-local.conf.js
+  * android_app_url in `browserstack.android_01` and `browserstack.android_02` capability set in nightwatch.conf.js
+  * ios_app_url in `browserstack.ios_01` capability set in nightwatch.conf.js
+  * android_local_app_url in `browserstack.local_01` and `browserstack.local_02` capability set in nightwatch-local.conf.js
 - Please go through [this](https://www.browserstack.com/docs/app-automate/appium/upload-app-from-filesystem) documentation for better understanding.
 
 ## Running your tests
