@@ -22,7 +22,7 @@ const browserStack = {
 }
 
 const nightwatchConfigs = {
-  src_folders: [],
+  src_folders: ['./tests/android/specs/e2e/*.js'],
   live_output: true,
 
   test_settings: {
@@ -42,7 +42,7 @@ const nightwatchConfigs = {
         browserName: null,
         'appium:options': {
           automationName: 'UiAutomator2',
-          app: 'bs://<android_app_id>',
+          app: 'bs://03497b00841d6c1b6e405f2bfeb4c91042acf8e7',
           platformVersion: '11.0',
           deviceName: 'Google Pixel 5'
         }
