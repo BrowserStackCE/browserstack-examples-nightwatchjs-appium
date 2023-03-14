@@ -21,8 +21,9 @@
   -X POST "https://api-cloud.browserstack.com/app-automate/upload" \
   -F "file=@/path/to/app/file/application-debug.apk"
   ```
-- Please note the value of app_url in the API response and set the app capbility in the `nightwatch.conf.js` and `nightwatch-local.conf.js` for the respective apps.
-  * android_app_url in `browserstack.android_01` and `browserstack.android_02` capability set in nightwatch.conf.js
+- Please note the value of app_url in the API response and set the app capbility in the `nightwatch.conf.js`, `nightwatch-local.conf.js` and `nightwatch-suite.conf.js` in conf folder for the respective apps.
+  * android_app_url in `browserstack.android_01` and `browserstack.android_02` capability set in nightwatch-suite.conf.js
+  * android_app_url in `browserstack.android_01` capability set in nightwatch.conf.js
   * ios_app_url in `browserstack.ios_01` capability set in nightwatch.conf.js
   * android_local_app_url in `browserstack.local_01` and `browserstack.local_02` capability set in nightwatch-local.conf.js
 - Please go through [this](https://www.browserstack.com/docs/app-automate/appium/upload-app-from-filesystem) documentation for better understanding.
@@ -32,6 +33,7 @@
 - To run a single android test, run `npm run single-android`
 - To run a single ios test, run `npm run single-ios`
 - To run parallel tests, run `npm run parallel`
+- To run parallel tests on different devices, run `npm run parallel-devices`
 - To run test suite, run `npm run suite`
 - To run local tests, run `npm run local`
 - To run parallel local tests, run `npm run parallel-local`
