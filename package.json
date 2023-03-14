@@ -5,12 +5,13 @@
   "description": "Selenium examples for Nightwatch and BrowserStack Automate",
   "scripts": {
     "test": "npm run single-android && npm run local && npm run parallel",
-    "single-android": "nightwatch --env browserstack.android_01",
-    "single-ios": "nightwatch --test ./tests/single/single_ios.js --env browserstack.ios_01",
-    "local": "node scripts/local.runner.js --config ./nightwatch-local.conf.js --test ./tests/local/local_test.js  --env browserstack.local_01 ",
-    "parallel": "nightwatch --test ./tests/single/single_test.js  --env browserstack.android_01,browserstack.android_02",
-    "parallel-local": "node scripts/local.runner.js --config ./nightwatch-local.conf.js --test ./tests/local/local_test.js --env browserstack.local_01,browserstack.local_02",
-    "suite": "nightwatch ./tests/suite --parallel --env browserstack.android_01"
+    "single-android": "nightwatch --test ./tests/specs/e2e/*.js --config ./resources/config/nightwatch.conf.js --env browserstack.android_01",
+    "single-ios": "nightwatch --test ./tests/single/single_ios.js --config ./resources/config/nightwatch.conf.js --env browserstack.ios_01",
+    "local": "node scripts/local.runner.js --config ./resources/config/nightwatch-local.conf.js --test ./tests/local/local_test.js  --env browserstack.local_01 ",
+    "parallel": "nightwatch --config ./resources/config/nightwatch-suite.conf.js --parallel --env browserstack.android_01",
+    "parallel-devices": "nightwatch --config ./resources/config/nightwatch-suite.conf.js --parallel --env browserstack.android_01,browserstack.android_02",
+    "parallel-local": "node scripts/local.runner.js --config ./resources/config/nightwatch-local.conf.js --test ./tests/local/local_test.js --env browserstack.local_01,browserstack.local_02",
+    "suite": "nightwatch --config ./resources/config/nightwatch-suite.conf.js --env browserstack.android_01"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
   },
   "dependencies": {
     "browserstack-local": "^1.4.8",
-    "nightwatch": "^2.1.5"
+    "nightwatch": "^2.6.17"
   },
   "license": "MIT",
   "devDependencies": {
