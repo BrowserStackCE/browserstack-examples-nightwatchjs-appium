@@ -46,7 +46,7 @@ const nightwatchConfigs = {
         browserName: null,
         'appium:options': {
           automationName: 'UiAutomator2',
-          app: 'bs://03497b00841d6c1b6e405f2bfeb4c91042acf8e7',
+          app: 'bs://<android_app_url>',
           platformVersion: '11.0',
           deviceName: 'Google Pixel 5'
         }
@@ -58,7 +58,7 @@ const nightwatchConfigs = {
         browserName: null,
         'appium:options': {
           automationName: 'UiAutomator2',
-          app: 'bs://03497b00841d6c1b6e405f2bfeb4c91042acf8e7',
+          app: 'bs://<android_app_url>',
           platformVersion: '11.0',
           deviceName: 'Google Pixel 4'
         }

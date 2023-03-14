@@ -41,7 +41,7 @@ const nightwatchConfigs = {
         browserName: null,
         'appium:options': {
           automationName: 'UiAutomator2',
-          app: 'bs://0e9e3e3ab25dc55ecbde0e2f9ac9c707923d9986',
+          app: 'bs://<android_local_app_url>',
           platformVersion: '9.0',
           deviceName: 'Google Pixel 3'
         }
@@ -53,7 +53,7 @@ const nightwatchConfigs = {
           browserName: null,
           'appium:options': {
             automationName: 'UiAutomator2',
-            app: 'bs://0e9e3e3ab25dc55ecbde0e2f9ac9c707923d9986',
+            app: 'bs://<android_local_app_url>',
             platformVersion: '9.0',
             deviceName: 'Samsung Galaxy S10'
           }
