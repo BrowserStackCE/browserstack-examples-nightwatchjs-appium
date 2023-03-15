@@ -17,7 +17,7 @@
 
 - Upload the apps provided in resources folder using this command 
 ```
-  curl -u "yatinsatija_DVMGOW:ySqkQqJrUughc1duBqkB" \
+  curl -u "<username>:<access-key>" \
   -X POST "https://api-cloud.browserstack.com/app-automate/upload" \
   -F "file=@/path/to/app/file/application-debug.apk"
   ```
