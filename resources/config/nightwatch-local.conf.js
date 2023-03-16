@@ -17,7 +17,7 @@ const browserStack = {
       userName: process.env.BROWSERSTACK_USERNAME,
       accessKey: process.env.BROWSERSTACK_ACCESS_KEY,
       appiumVersion: '1.22.0',
-      local:"true"
+      
     }
   },
 }
@@ -25,6 +25,13 @@ const browserStack = {
 const nightwatchConfigs = {
   src_folders: [],
   live_output: true,
+  plugins: ['@nightwatch/browserstack'],
+  
+  // browserstack plugin settings...
+  '@nightwatch/browserstack': {
+    browserstackLocal: true, // set true to manage browserstack local tunnel. Defaults to false.
+    
+  },
 
   test_settings: {
     default: {

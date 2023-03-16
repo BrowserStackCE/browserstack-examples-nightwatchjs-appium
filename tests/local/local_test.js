@@ -5,8 +5,8 @@ describe('Local Sample App', function () {
     app
       .click('id', 'com.example.android.basicnetworking:id/test_action')
       .click('id', 'com.example.android.basicnetworking:id/test_action')
-      .assert.elementPresent({ selector: '/hierarchy/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.ScrollView/android.widget.TextView', locateStrategy: 'xpath' })
-      .assert.textContains({ selector: '/hierarchy/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.ScrollView/android.widget.TextView', locateStrategy: 'xpath'}, 'Up and running')
+      .assert.elementPresent({ selector: 'com.example.android.basicnetworking:id/textView', locateStrategy: 'id' })
+      .assert.textContains({ selector: 'com.example.android.basicnetworking:id/textView', locateStrategy: 'id'}, 'Up and running')
       .pause(2000);
   });
 });
