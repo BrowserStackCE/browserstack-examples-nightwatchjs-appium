@@ -1,0 +1,13 @@
+[
+  {
+    "username": "locked_user",
+    "password": "testingisfun99",
+    "expected_message": "Your account has been locked."
+  },
+  {
+    "username": "fav_user",
+    "password": "wrong_password",
+    "expected_message": "Invalid Password"
+  }
+  
+]
