@@ -46,7 +46,8 @@ const nightwatchConfigs = {
         browserName: null,
         'appium:options': {
           automationName: 'UiAutomator2',
-          app: 'bs://<android_app_url>',
+          // custom id for the uploaded app: https://www.browserstack.com/docs/app-automate/appium/upload-app-define-custom-id
+          app: 'bs_sample_android_app',
           platformVersion: '11.0',
           deviceName: 'Google Pixel 5'
         }
@@ -58,7 +59,8 @@ const nightwatchConfigs = {
         browserName: null,
         'appium:options': {
           automationName: 'UiAutomator2',
-          app: 'bs://<android_app_url>',
+          // custom id for the uploaded app: https://www.browserstack.com/docs/app-automate/appium/upload-app-define-custom-id
+          app: 'bs_sample_android_app',
           platformVersion: '11.0',
           deviceName: 'Google Pixel 4'
         }
