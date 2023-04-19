@@ -48,24 +48,27 @@ const nightwatchConfigs = {
         browserName: null,
         'appium:options': {
           automationName: 'UiAutomator2',
-          app: 'bs://<android_local_app_url>',
+          // custom id for the uploaded app: https://www.browserstack.com/docs/app-automate/appium/upload-app-define-custom-id
+          app: 'bs_sample_android_local_app',
           platformVersion: '9.0',
           deviceName: 'Google Pixel 3'
-        }
+        },
+        appUploadPath: 'apps/android_local_app.apk'
       }
     },
     "browserstack.local_02": {
-        extends: 'browserstack',
-        'desiredCapabilities': {
-          browserName: null,
-          'appium:options': {
-            automationName: 'UiAutomator2',
-            app: 'bs://<android_local_app_url>',
-            platformVersion: '9.0',
-            deviceName: 'Samsung Galaxy S10'
-          }
+      extends: 'browserstack',
+      'desiredCapabilities': {
+        browserName: null,
+        'appium:options': {
+          automationName: 'UiAutomator2',
+          // custom id for the uploaded app: https://www.browserstack.com/docs/app-automate/appium/upload-app-define-custom-id
+          app: 'bs_sample_android_local_app',
+          platformVersion: '9.0',
+          deviceName: 'Samsung Galaxy S10'
         }
-      },
+      }
+    },
   }
 }
 

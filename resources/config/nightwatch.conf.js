@@ -33,8 +33,6 @@ const nightwatchConfigs = {
     browserstack:  {
       ...browserStack
     },
-    
-    
 
     "browserstack.android_01": {
       extends: 'browserstack',
@@ -42,10 +40,12 @@ const nightwatchConfigs = {
         browserName: null,
         'appium:options': {
           automationName: 'UiAutomator2',
-          app: 'bs://<android_app_url>',
+          // custom id for the uploaded app: https://www.browserstack.com/docs/app-automate/appium/upload-app-define-custom-id
+          app: 'bs_sample_android_app',
           platformVersion: '11.0',
           deviceName: 'Google Pixel 5'
-        }
+        },
+        appUploadPath: 'apps/android_app.apk'
       }
     },
 
@@ -55,10 +55,12 @@ const nightwatchConfigs = {
         browserName: null,
         'appium:options': {
           automationName: 'XCUITest',
-          app: 'bs://<ios_app_url>',
+          // custom id for the uploaded app: https://www.browserstack.com/docs/app-automate/appium/upload-app-define-custom-id
+          app: 'bs_sample_ios_app',
           platformVersion: '16',
           deviceName: 'iPhone 14'
-        }
+        },
+        appUploadPath: 'apps/ios_app.ipa'
       }
     },
   }
