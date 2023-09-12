@@ -24,6 +24,22 @@ const browserStack = {
 const nightwatchConfigs = {
   src_folders: [],
   live_output: true,
+  plugins: ['@nightwatch/browserstack'],
+  
+  // browserstack plugin settings...
+  '@nightwatch/browserstack': {
+    browserstackLocal: false, // set true to manage browserstack local tunnel. Defaults to false.
+    test_observability: {
+      enabled: true,
+      user: process.env.BROWSERSTACK_USERNAME,
+      key: process.env.BROWSERSTACK_ACCESS_KEY,
+      projectName: "browserstack-appium-nightwatch-example-project",
+      buildName: "browserstack-appium-nightwatch-example-build",
+      }
+     
+    },
+    
+  
 
   test_settings: {
     default: {
