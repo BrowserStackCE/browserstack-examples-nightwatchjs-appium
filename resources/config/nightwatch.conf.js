@@ -22,7 +22,7 @@ const browserStack = {
 }
 
 const nightwatchConfigs = {
-  src_folders: [],
+  src_folders: ["./tests/specs/e2e/*.js"],
   live_output: true,
   plugins: ['@nightwatch/browserstack'],
   
