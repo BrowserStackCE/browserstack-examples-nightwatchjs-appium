@@ -29,7 +29,7 @@ const nightwatchConfigs = {
   "./tests/specs/cart/*.spec.js",],
   live_output: true,
   plugins: ['@nightwatch/browserstack'],
-  
+
   // browserstack plugin settings...
   '@nightwatch/browserstack': {
     browserstackLocal: false, // set true to manage browserstack local tunnel. Defaults to false.
@@ -40,7 +40,7 @@ const nightwatchConfigs = {
       projectName: "browserstack-appium-nightwatch-example-project",
       buildName: "browserstack-appium-nightwatch-example-build",
       }
-     
+
     },
 
   test_settings: {
@@ -51,8 +51,8 @@ const nightwatchConfigs = {
     browserstack:  {
       ...browserStack
     },
-    
-    
+
+
 
     "browserstack.android_01": {
       extends: 'browserstack',
@@ -62,8 +62,8 @@ const nightwatchConfigs = {
           automationName: 'UiAutomator2',
           // custom id for the uploaded app: https://www.browserstack.com/docs/app-automate/appium/upload-app-define-custom-id
           app: 'bs_sample_android_app',
-          platformVersion: '11.0',
-          deviceName: 'Google Pixel 5'
+          platformVersion: '14.0',
+          deviceName: 'Google Pixel 8 Pro'
         }
       }
     },
@@ -75,8 +75,8 @@ const nightwatchConfigs = {
           automationName: 'UiAutomator2',
           // custom id for the uploaded app: https://www.browserstack.com/docs/app-automate/appium/upload-app-define-custom-id
           app: 'bs_sample_android_app',
-          platformVersion: '11.0',
-          deviceName: 'Google Pixel 4'
+          platformVersion: '13.0',
+          deviceName: 'One Plus 11R'
         }
       }
     },

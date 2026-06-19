@@ -25,7 +25,7 @@ const nightwatchConfigs = {
   src_folders: [],
   live_output: true,
   plugins: ['@nightwatch/browserstack'],
-  
+
   // browserstack plugin settings...
   '@nightwatch/browserstack': {
     browserstackLocal: false, // set true to manage browserstack local tunnel. Defaults to false.
@@ -36,10 +36,10 @@ const nightwatchConfigs = {
       projectName: "browserstack-appium-nightwatch-example-project",
       buildName: "browserstack-appium-nightwatch-example-build",
       }
-     
+
     },
-    
-  
+
+
 
   test_settings: {
     default: {
@@ -58,8 +58,8 @@ const nightwatchConfigs = {
           automationName: 'UiAutomator2',
           // custom id for the uploaded app: https://www.browserstack.com/docs/app-automate/appium/upload-app-define-custom-id
           app: 'bs_sample_android_app',
-          platformVersion: '11.0',
-          deviceName: 'Google Pixel 5'
+          platformVersion: '14.0',
+          deviceName: 'Google Pixel 8 Pro'
         },
         appUploadPath: 'apps/android_app.apk'
       }
@@ -74,7 +74,7 @@ const nightwatchConfigs = {
           // custom id for the uploaded app: https://www.browserstack.com/docs/app-automate/appium/upload-app-define-custom-id
           app: 'bs_sample_ios_app',
           platformVersion: '16',
-          deviceName: 'iPhone 14'
+          deviceName: 'iPhone 14 Pro Max'
         },
         appUploadPath: 'apps/ios_app.ipa'
       }
