@@ -17,7 +17,7 @@ const browserStack = {
       userName: process.env.BROWSERSTACK_USERNAME,
       accessKey: process.env.BROWSERSTACK_ACCESS_KEY,
       appiumVersion: '1.22.0',
-      
+
     }
   },
 }
@@ -26,7 +26,7 @@ const nightwatchConfigs = {
   src_folders: [],
   live_output: true,
   plugins: ['@nightwatch/browserstack'],
-  
+
   // browserstack plugin settings...
   '@nightwatch/browserstack': {
     browserstackLocal: true, // set true to manage browserstack local tunnel. Defaults to false.
@@ -37,7 +37,7 @@ const nightwatchConfigs = {
       projectName: "browserstack-appium-nightwatch-example-project",
       buildName: "browserstack-appium-nightwatch-example-build",
       }
-     
+
     },
 
   test_settings: {
@@ -48,7 +48,7 @@ const nightwatchConfigs = {
     browserstack:  {
       ...browserStack
     },
-    
+
     "browserstack.local_01": {
       extends: 'browserstack',
       'desiredCapabilities': {
@@ -57,8 +57,8 @@ const nightwatchConfigs = {
           automationName: 'UiAutomator2',
           // custom id for the uploaded app: https://www.browserstack.com/docs/app-automate/appium/upload-app-define-custom-id
           app: 'bs_sample_android_local_app',
-          platformVersion: '9.0',
-          deviceName: 'Google Pixel 3'
+          platformVersion: '14.0',
+          deviceName: 'Google Pixel 8 Pro'
         },
         appUploadPath: 'apps/android_local_app.apk'
       }
@@ -71,8 +71,8 @@ const nightwatchConfigs = {
           automationName: 'UiAutomator2',
           // custom id for the uploaded app: https://www.browserstack.com/docs/app-automate/appium/upload-app-define-custom-id
           app: 'bs_sample_android_local_app',
-          platformVersion: '9.0',
-          deviceName: 'Samsung Galaxy S10'
+          platformVersion: '12.0',
+          deviceName: 'Samsung Galaxy S22 Ultra'
         }
       }
     },
